@@ -28,3 +28,18 @@
 - Any
   - Any kind of value, no specific type assignment
   - \*
+
+## TypeScript watch mode
+
+This is to make tsc in a watch mode so that we won't need to compile the file each time we made change to.
+
+Syntax: `tsc xxx.ts --watch` or `tsc xxx.ts -w`
+
+Downside: This only works for one ts file. It's barely the case if working on a big project.
+
+We can do the following steps to let `tsc` watch the whole project:
+
+1. `cd` to the project folder.
+2. Run `tsc --init` command.
+   Note that this will create a tsconfig.json file which have bunch of settings for typescript configuration.
+3. Run `tsc -w` command.
